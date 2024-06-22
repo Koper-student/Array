@@ -40,3 +40,24 @@ float calcuateAverage(int array[]){
     float average = (float) sum/SIZE;
     return average;
 }
+
+void swapElements(int array[], int a, int b){
+
+    int tmp = array[a];
+    array[a] = array[b];
+    array[b] = tmp;
+}
+void bubbleSort(int array[]){
+
+    for( int i=0; i<SIZE; i++ ){
+        for( int j=0; j<SIZE-i; j++ ){
+            if( array[j] > array[j+1] ){
+                swapElements( array, j, j+1 );
+            }
+        }
+    }
+}
+float findMedian( int array[]){
+    bubbleSort( array);
+    return ( array[SIZE/2 - 1] + array[SIZE/2] )/2;
+}
