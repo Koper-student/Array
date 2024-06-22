@@ -40,12 +40,26 @@ int main() {
                break;
            }
            case 6:{
+               int a,b;
+               printf("Podaj a i b\n");
+               scanf("%d %d", &a, &b);
 
+               swapElements(array, a,b);
+
+               break;
            }
            case 7:{
+               printf("Sorting\n");
 
+               bubbleSort( array);
+
+               break;
            }
            case 8:{
+               printf( "Mediana: %.2f\n", findMedian( array ) );
+
+               break;
+
 
            }
            default:
